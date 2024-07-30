@@ -4,11 +4,6 @@ static void pbcannedknockBaseNoise() {
 	copyArray(config->knockBaseNoise, hardCodedknockBaseNoise);
 }
 
-static void pbcannedmafDecodingBins() {
-	static const float hardCodedmafDecodingBins[32] = {0.0, 0.78125, 1.3867188, 2.9101562, 4.2578125, 4.9804688, 2016.0, 2017.0, 2018.0, 2019.0, 2020.0, 2021.0, 2022.0, 2023.0, 2024.0, 2025.0, 2026.0, 2027.0, 2028.0, 2029.0, 2030.0, 2031.0, 2032.0, 2033.0, 2034.0, 2035.0, 2036.0, 2037.0, 2038.0, 2039.0, 2040.0, 2041.0};
-	copyArray(config->mafDecodingBins, hardCodedmafDecodingBins);
-}
-
 static void pbcannedcltTimingBins() {
 	static const float hardCodedcltTimingBins[8] = {-40.0, -17.0, 6.0, 30.0, 40.0, 50.0, 97.0, 120.0};
 	copyArray(config->cltTimingBins, hardCodedcltTimingBins);
@@ -104,46 +99,6 @@ static void pbcannedignitionTable() {
 	copyTable(config->ignitionTable, hardCodedignitionTable);
 }
 
-static void pbcannedignBlends1_rpmBins() {
-	static const float hardCodedignBlends1_rpmBins[8] = {0.0, 1000.0, 2000.0, 3000.0, 4000.0, 5000.0, 6000.0, 7000.0};
-	copyArray(engineConfiguration->boostClosedLoopBlends2.ignBlends1_rpmBins, hardCodedignBlends1_rpmBins);
-}
-
-static void pbcannedignBlends2_rpmBins() {
-	static const float hardCodedignBlends2_rpmBins[8] = {0.0, 1000.0, 2000.0, 3000.0, 4000.0, 5000.0, 6000.0, 7000.0};
-	copyArray(engineConfiguration->boostClosedLoopBlends2.ignBlends2_rpmBins, hardCodedignBlends2_rpmBins);
-}
-
-static void pbcannedignBlends3_rpmBins() {
-	static const float hardCodedignBlends3_rpmBins[8] = {0.0, 1000.0, 2000.0, 3000.0, 4000.0, 5000.0, 6000.0, 7000.0};
-	copyArray(engineConfiguration->boostClosedLoopBlends2.ignBlends3_rpmBins, hardCodedignBlends3_rpmBins);
-}
-
-static void pbcannedignBlends4_rpmBins() {
-	static const float hardCodedignBlends4_rpmBins[8] = {0.0, 1000.0, 2000.0, 3000.0, 4000.0, 5000.0, 6000.0, 7000.0};
-	copyArray(engineConfiguration->boostClosedLoopBlends2.ignBlends4_rpmBins, hardCodedignBlends4_rpmBins);
-}
-
-static void pbcannedveBlends1_rpmBins() {
-	static const float hardCodedveBlends1_rpmBins[8] = {0.0, 1000.0, 2000.0, 3000.0, 4000.0, 5000.0, 6000.0, 7000.0};
-	copyArray(engineConfiguration->boostClosedLoopBlends2.veBlends1_rpmBins, hardCodedveBlends1_rpmBins);
-}
-
-static void pbcannedveBlends2_rpmBins() {
-	static const float hardCodedveBlends2_rpmBins[8] = {0.0, 1000.0, 2000.0, 3000.0, 4000.0, 5000.0, 6000.0, 7000.0};
-	copyArray(engineConfiguration->boostClosedLoopBlends2.veBlends2_rpmBins, hardCodedveBlends2_rpmBins);
-}
-
-static void pbcannedveBlends3_rpmBins() {
-	static const float hardCodedveBlends3_rpmBins[8] = {0.0, 1000.0, 2000.0, 3000.0, 4000.0, 5000.0, 6000.0, 7000.0};
-	copyArray(engineConfiguration->boostClosedLoopBlends2.veBlends3_rpmBins, hardCodedveBlends3_rpmBins);
-}
-
-static void pbcannedveBlends4_rpmBins() {
-	static const float hardCodedveBlends4_rpmBins[8] = {0.0, 1000.0, 2000.0, 3000.0, 4000.0, 5000.0, 6000.0, 7000.0};
-	copyArray(engineConfiguration->boostClosedLoopBlends2.veBlends4_rpmBins, hardCodedveBlends4_rpmBins);
-}
-
 static void pbcannedveTable() {
 	static const float hardCodedveTable[16][16] = {
 {50.300,	50.300,	50.400,	50.500,	50.600,	50.600,	50.300,	29.900,	29.800,	29.900,	30.400,	31.400,	33.000,	35.100,	37.700,	40.900,	},
@@ -207,7 +162,7 @@ static void pbcannedlambdaTable() {
 {11.000,	11.000,	11.000,	11.000,	11.000,	11.000,	11.000,	11.000,	11.000,	11.000,	11.000,	11.000,	11.000,	11.000,	11.000,	11.000,	},
 {10.700,	10.700,	10.700,	10.700,	10.700,	10.700,	10.700,	10.700,	10.700,	10.700,	10.700,	10.700,	10.700,	10.700,	10.700,	10.700,	},
 };
-	copyTable(config->lambdaTable, hardCodedlambdaTable);
+	copyTable(config->lambdaTable, hardCodedlambdaTable, 1.0 / 14.7);
 }
 
 static void pbcannedtcuSolenoidTable() {

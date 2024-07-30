@@ -127,7 +127,7 @@
     engineConfiguration->auxPid[1].dFactor = 0.2;
     // default "None"
     engineConfiguration->canNbcType = CAN_BUS_GENESIS_COUPE;
-    // default "MAP"
+    // default "Executor"
     engineConfiguration->debugMode = DBG_22;
     // default 200.0
     engineConfiguration->rpmSoftLimitWindowSize = 0;
@@ -163,7 +163,6 @@
 	coupleBK1cannedmap_samplingWindowBins();
 	coupleBK1cannedvrThreshold1_rpmBins();
 	coupleBK1cannedvrThreshold2_rpmBins();
-	coupleBK1cannedmafDecodingBins();
 	coupleBK1cannedcltRevLimitRpmBins();
 	coupleBK1cannedcltIdleCorrBins();
 	coupleBK1cannedcltIdleCorr();

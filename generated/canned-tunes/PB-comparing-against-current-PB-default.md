@@ -119,6 +119,8 @@
     engineConfiguration->gearRatio[4] = 1.88;
     // default 0.0
     engineConfiguration->gearRatio[5] = 1.57;
+    // default "Executor"
+    engineConfiguration->debugMode = DBG_27;
     // default 200.0
     engineConfiguration->afterCrankingIACtaperDuration = 100;
     // default "Launch Button"
@@ -130,7 +132,6 @@
 
 
 	pbcannedknockBaseNoise();
-	pbcannedmafDecodingBins();
 	pbcannedcltTimingBins();
 	pbcannedcltTimingExtra();
 	pbcannedcltIdleCorrBins();
@@ -143,14 +144,6 @@
 	pbcannedscriptTable4();
 	pbcannedignitionRpmBins();
 	pbcannedignitionTable();
-	pbcannedignBlends1_rpmBins();
-	pbcannedignBlends2_rpmBins();
-	pbcannedignBlends3_rpmBins();
-	pbcannedignBlends4_rpmBins();
-	pbcannedveBlends1_rpmBins();
-	pbcannedveBlends2_rpmBins();
-	pbcannedveBlends3_rpmBins();
-	pbcannedveBlends4_rpmBins();
 	pbcannedveTable();
 	pbcannedmaxKnockRetardRpmBins();
 	pbcannedmaxKnockRetardLoadBins();

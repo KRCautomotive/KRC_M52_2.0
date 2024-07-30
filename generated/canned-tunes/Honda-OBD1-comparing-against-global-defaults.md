@@ -73,6 +73,8 @@
     engineConfiguration->enableSoftwareKnock = true;
     // default "false"
     engineConfiguration->enableVerboseCanTx = true;
+    // default "Executor"
+    engineConfiguration->debugMode = DBG_27;
     // default 200.0
     engineConfiguration->rpmSoftLimitWindowSize = 0;
     // default 4.0
@@ -95,20 +97,10 @@
 
 	cannedinjector_battLagCorrBins();
 	cannedinjector_battLagCorr();
-	cannedmafDecodingBins();
-	cannedcltIdleCorr();
 	cannedtractionControlSlipBins();
 	cannedboostTableOpenLoop();
 	cannedscriptTable4();
 	cannedignitionTable();
-	cannedignBlends1_rpmBins();
-	cannedignBlends2_rpmBins();
-	cannedignBlends3_rpmBins();
-	cannedignBlends4_rpmBins();
-	cannedveBlends1_rpmBins();
-	cannedveBlends2_rpmBins();
-	cannedveBlends3_rpmBins();
-	cannedveBlends4_rpmBins();
 	cannedveTable();
 	cannedlambdaTable();
 	cannedgppwm1_rpmBins();

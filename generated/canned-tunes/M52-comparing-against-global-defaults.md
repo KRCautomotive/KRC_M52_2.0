@@ -129,7 +129,7 @@
     engineConfiguration->vvtControlMinRpm = 800;
     // default "Speed Density"
     engineConfiguration->fuelAlgorithm = LM_ALPHA_N;
-    // default "MAP"
+    // default "Executor"
     engineConfiguration->debugMode = DBG_22;
     // default "yes"
     engineConfiguration->cutFuelOnHardLimit = no;
@@ -217,11 +217,9 @@
 	cannedmap_samplingWindow();
 	cannedvrThreshold1_rpmBins();
 	cannedvrThreshold2_rpmBins();
-	cannedmafDecodingBins();
 	cannedcltFuelCorr();
 	cannedcrankingFuelCoef();
 	cannedcltRevLimitRpmBins();
-	cannedcrankingCycleCoef();
 	cannedcltIdleCorr();
 	cannedcltCrankingCorr();
 	cannedcltIdleRpm();
