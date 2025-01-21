@@ -103,6 +103,10 @@ pins:
     class: analog_inputs
     ts_name: BARO (PA5)
 
+  - id: EFI_ADC_8
+    class: analog_inputs
+    ts_name: O2_Sensor (PB0)
+
   - id: EFI_ADC_9
     class: analog_inputs
     ts_name: ANALOG_A9 (PB1)
