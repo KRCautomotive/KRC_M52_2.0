@@ -1990,7 +1990,7 @@
 #define ts_show_wastegate_sensor true
 #define ts_show_wbo_canbus_index true
 #define ts_show_wbo_canbus_set_index true
-#define TS_SIGNATURE "rusEFI main.2025.06.11.KRC_M52_2.0.2410951718"
+#define TS_SIGNATURE "rusEFI main.2025.06.12.KRC_M52_2.0.2410951718"
 #define TS_SIMULATE_CAN '>'
 #define TS_SIMULATE_CAN_char >
 #define TS_TEST_COMMAND 't'
